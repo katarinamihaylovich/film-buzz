@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link rel="'stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Project-1</title>
   </head>
   <body>
@@ -16,13 +16,19 @@
       <div class="header center-align">
         <h1>Film Buzz</h1>
       </div>
-      <div class="row right-align">
-        <div class="col s3 m3">1</div>
-        <div class="col s3 m3">2</div>
-        <div class="col s3 m3">3</div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input
+            value="Avatar"
+            id="search-input"
+            type="text"
+            class="validate"
+          />
+          <label class="active" for="first_name2">Search for a movie!</label>
+        </div>
       </div>
       <div class="center-align">
-        <a class="waves-effect waves-light btn-large">Browse</a>
+        <a class="waves-effect waves-light btn-large" id="search-btn">Browse</a>
       </div>
       <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
