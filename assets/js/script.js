@@ -1,5 +1,14 @@
 var searchBtn = document.querySelector("#search-btn");
 var searchInput = document.querySelector("#search-input");
+var imageEl = document.getElementById("image");
+var plotEl = document.getElementById("plot");
+var genreEl = document.getElementById("genre");
+var languageEl = document.getElementById("language");
+var actorsEl = document.getElementById("actors");
+var directorEl = document.getElementById("director");
+var releaseEl = document.getElementById("release");
+var runTimeEl = document.getElementById("run-time");
+
 
 function submit() {
   var search = searchInput.value.toString();
@@ -15,11 +24,27 @@ function submit() {
       console.log(data);
       console.log(data.Genre);
       // Each genre
-      console.log(data.Genre.split(","));
+      // console.log(data.Genre.split(","));
+
       // One genre
-      console.log(data.Genre.split(",")[0]);
+      var genre = data.Genre.split(",")[0];
+      console.log(genre);
+      var ratings = parseFloat(data.Ratings[1].Value);
+      console.log(ratings);
 
       // DOM for movie display
+      plotEl.textContent = "Plot: " + data.Plot;
+      genreEl.textContent = "Genre: " + data.Genre;
+      languageEl.textContent = "Language: " + data.Language;
+      actorsEl.textContent = "Cast: " + data.Actors;
+      directorEl.textContent = "Director: " + data.Director;
+      releaseEl.textContent = "Release Date: " + data.Released;
+      runTimeEl.textContent = "Run Time: " + data.Runtime;
+
+      function displayPoster(data) {
+        
+      };
+
       // Set up variables for APIs needed for drinks first so the person working on drinks have access to data from movie fetch
 
       fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail")
