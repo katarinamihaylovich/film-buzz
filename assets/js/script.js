@@ -24,9 +24,13 @@ function submit() {
       console.log(data);
       console.log(data.Genre);
       // Each genre
-      console.log(data.Genre.split(","));
+      // console.log(data.Genre.split(","));
+
       // One genre
-      console.log(data.Genre.split(",")[0]);
+      var genre = data.Genre.split(",")[0];
+      console.log(genre);
+      var ratings = parseFloat(data.Ratings[1].Value);
+      console.log(ratings);
 
       // DOM for movie display
       plotEl.textContent = "Plot: " + data.Plot;
