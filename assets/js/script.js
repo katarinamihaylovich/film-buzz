@@ -24,7 +24,7 @@ function submit() {
       console.log(data);
       console.log(data.Genre);
       // Each genre
-      // console.log(data.Genre.split(","));
+      //console.log(data.Genre.split(","));
 
       // One genre
       var genre = data.Genre.split(",")[0];
