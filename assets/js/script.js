@@ -8,11 +8,14 @@ var actorsEl = document.getElementById("actors");
 var directorEl = document.getElementById("director");
 var releaseEl = document.getElementById("release");
 var runTimeEl = document.getElementById("run-time");
-
+var searchHistoryContainerEl = document.querySelector("#search-history");
+var searchHistoryList = JSON.parse(localStorage.getItem("searchHistory")) || [];
 
 function submit() {
   var search = searchInput.value.toString();
   console.log(search);
+  localStorage.setItem("searchHistory", JSON.stringify(searchHistoryList));
+  renderSearchHistory();
 
   // Fetch request for moviesAPI
   fetch(`https://www.omdbapi.com/?apikey=e1fca0fc&t=${search}`)
@@ -41,9 +44,7 @@ function submit() {
       releaseEl.textContent = "Release Date: " + data.Released;
       runTimeEl.textContent = "Run Time: " + data.Runtime;
 
-      function displayPoster(data) {
-        
-      };
+      function displayPoster(data) {}
 
       // Set up variables for APIs needed for drinks first so the person working on drinks have access to data from movie fetch
 
@@ -67,6 +68,25 @@ function submit() {
 
 // Search Button
 searchBtn.addEventListener("click", submit);
+
+// Search history button
+searchHistoryContainerEl.addEventListener("click", function (event) {
+  if (event.target.matches("#search-history")) {
+    console.log("test");
+  }
+});
+
+// Search history list
+function renderSearchHistory() {
+  searchHistoryContainerEl.innerHTML = "";
+  for (var i = 0; i < searchHistoryList.length; i++) {
+    console.log(searchHistoryList);
+    var searchList = document.createElement("button");
+    searchList.setAttribute("id", "search-list");
+    searchList.textContent = searchHistoryList[i];
+    searchHistoryContainerEl.appendChild(searchList);
+  }
+}
 
 // Ideas
 // 1. A second button called feeling lucky which includes an array of movies we put in there. We then make a random number generator
