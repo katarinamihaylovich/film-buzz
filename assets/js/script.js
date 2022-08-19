@@ -42,7 +42,7 @@ function submit() {
       runTimeEl.textContent = "Run Time: " + data.Runtime;
 
       function displayPoster(data) {
-        
+
       };
 
       // Set up variables for APIs needed for drinks first so the person working on drinks have access to data from movie fetch
@@ -54,6 +54,49 @@ function submit() {
         })
         .then(function (data) {
           console.log(data);
+
+
+
+          var action = ['Manhattan', 'Aviation', 'Gimlet']
+          var adventure = ['Blue Hurricane', 'Midnight Mint', 'Greyhound']
+          var romance = ['Cosmopolitan', 'Lemon Drop', 'Adam & Eve']
+          var fantasy = ['Dry Martini', 'Gin and Tonic', 'Imperial Cocktail']
+          var comedy = ['Banana Cream Pi', 'Flaming Lamborghini', 'Gin Basil Smash ']
+          var drama = ['57 Checy with a White License Plate', '747 Drink', '155 Belmont']
+          var horror = ['Michelada', 'Apperol Spritz', 'Amaretto Fizz']
+          var thriller = ['Gin Basil Smash', 'Broadside', 'Abbey Martini']
+          var scifi = ['Espresso Martini', 'Hot Toddy', 'Martinez 2']
+          var crime = ['Miama Vice', 'Dark Caipirinha', "Hunter's Moon"]
+          var animation = ['Mango Mojito', 'Lemon Elderflower Spritzer', 'Cream Soda']
+          var mystery = ['Adios Amigos Cocktail', 'Corpse Reviver', 'Death in the Afternoon']
+          var biography = ['Gin Rickey', 'Addison', 'Mary Pickford']
+          var documentary = ['Irish Curlding Cow', 'Mountain Bramble', "Duchamp's Punch"]
+          var family = ['Absolutely Fabulous', 'Cherry Electric Lemonade', 'Applejack']
+          var filmnoir = ['Butterfly Effect', 'Afterglow', 'French Martini']
+          var history = ['Brooklyn', 'Malibu Twister', " A Gillian's Island"]
+          var music = ['Funk and Soul', 'A1', 'Ace']
+          var musical = ['Jitterbug', 'Honey Bee', 'Lazy Coconut Paloma']
+          var short = ['Bahama Mama', 'Autumn Garibaldi', 'Figgy Thyme']
+          var sport = ['A True Amaretto Sour', "Arizona Stingers' ", '9 1/2 Weeks']
+          var western = ['Bounty Hunter', 'Corn n Oil', "Cocktail Horse's Neck"]
+          var war = ['Absolutly Screwed Up', 'Army Special', 'Bombay Cassis']
+          var superhero = ["Captain kidd's Punch", 'Aquamarine', 'Apple Karate']
+
+
+ 
+         
+         
+
+
+
+
+
+
+
+
+
+
+
           // if genre = x then drink
           // create an array that includes a list of drinks for each genre. Some movies have multiple genres
           // create a random number generator that selects a drink from the array for display
