@@ -18,37 +18,43 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input
-            value="Avatar"
-            id="search-input"
-            type="text"
-            class="validate"
-          />
+          <input value=" " id="search-input" type="text" class="validate" />
           <label class="active" for="first_name2">Search for a movie!</label>
         </div>
       </div>
       <div class="center-align">
         <a class="waves-effect waves-light btn-large" id="search-btn">Search</a>
       </div>
-      <div class="container">
+      <!-- <div class="container"> -->
         <div class="row">
-          <div class="col m6 center-align">
-            <p>Image of movie / use img tag / Title</p>
-            <p>Plot</p>
-            <p>Genre</p>
-            <p>Language</p>
-            <p>Actors</p>
-            <p>Directors</p>
-            <p>Stars</p>
-            <p>Release Date</p>
-            <p>Run Time</p>
+          <div class="col m4 center-align" id="search-history">
+            <div class="card-content ">
+              <p>history 1</p>
+              <p>history 2</p>
+              <p>history 3</p>
+            </div>
           </div>
-          <div class="col m6 center-align">
-            <p>Name of the drink</p>
-            <p>Image of the drink / use img tag</p>
+          <div class="col m4 center-align">
+            <div class="card-content">
+              <img id="image"/>
+              <p id="plot"></p>
+              <p id="genre"></p>
+              <p id="language"></p>
+              <p id="actors"></p>
+              <p id="director"></p>
+              <p id="release"></p>
+              <p id="run-time"></p>
+            </div>
+          </div> 
+
+          <div class="col m4 center-align">
+            <div class="card-content">
+              <p>Name of the drink</p>
+              <p>Image of the drink / use img tag</p>
+            </div>
           </div>
         </div>
-      </div>
+      <!-- </div> -->
       <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
