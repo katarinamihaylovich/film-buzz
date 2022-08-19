@@ -29,8 +29,8 @@ function submit() {
       // One genre
       var genre = data.Genre.split(",")[0];
       console.log(genre);
-      var ratings = parseFloat(data.Ratings[1].Value);
-      console.log(ratings);
+      //var ratings = parseFloat(data.Ratings[1].Value);
+     // console.log(ratings);
 
       // DOM for movie display
       plotEl.textContent = "Plot: " + data.Plot;
@@ -56,49 +56,99 @@ function submit() {
           console.log(data);
 
 
-
-          var action = ['Manhattan', 'Aviation', 'Gimlet']
-          var adventure = ['Blue Hurricane', 'Midnight Mint', 'Greyhound']
-          var romance = ['Cosmopolitan', 'Lemon Drop', 'Adam & Eve']
-          var fantasy = ['Dry Martini', 'Gin and Tonic', 'Imperial Cocktail']
-          var comedy = ['Banana Cream Pi', 'Flaming Lamborghini', 'Gin Basil Smash ']
-          var drama = ['57 Checy with a White License Plate', '747 Drink', '155 Belmont']
-          var horror = ['Michelada', 'Apperol Spritz', 'Amaretto Fizz']
-          var thriller = ['Gin Basil Smash', 'Broadside', 'Abbey Martini']
-          var scifi = ['Espresso Martini', 'Hot Toddy', 'Martinez 2']
-          var crime = ['Miama Vice', 'Dark Caipirinha', "Hunter's Moon"]
-          var animation = ['Mango Mojito', 'Lemon Elderflower Spritzer', 'Cream Soda']
-          var mystery = ['Adios Amigos Cocktail', 'Corpse Reviver', 'Death in the Afternoon']
-          var biography = ['Gin Rickey', 'Addison', 'Mary Pickford']
-          var documentary = ['Irish Curlding Cow', 'Mountain Bramble', "Duchamp's Punch"]
-          var family = ['Absolutely Fabulous', 'Cherry Electric Lemonade', 'Applejack']
-          var filmnoir = ['Butterfly Effect', 'Afterglow', 'French Martini']
-          var history = ['Brooklyn', 'Malibu Twister', " A Gillian's Island"]
-          var music = ['Funk and Soul', 'A1', 'Ace']
-          var musical = ['Jitterbug', 'Honey Bee', 'Lazy Coconut Paloma']
-          var short = ['Bahama Mama', 'Autumn Garibaldi', 'Figgy Thyme']
-          var sport = ['A True Amaretto Sour', "Arizona Stingers' ", '9 1/2 Weeks']
-          var western = ['Bounty Hunter', 'Corn n Oil', "Cocktail Horse's Neck"]
-          var war = ['Absolutly Screwed Up', 'Army Special', 'Bombay Cassis']
-          var superhero = ["Captain kidd's Punch", 'Aquamarine', 'Apple Karate']
-
-
- 
-         
-         
-
-
-
-
-
-
-
-
-
-
+          // created an array that includes a list of drinks for each genre 
+          var action = ['Manhattan', 'Aviation', 'Gimlet'];
+          var adventure = ['Blue Hurricane', 'Midnight Mint', 'Greyhound'];
+          var romance = ['Cosmopolitan', 'Lemon Drop', 'Adam & Eve'];
+          var fantasy = ['Dry Martini', 'Gin and Tonic', 'Imperial Cocktail'];
+          var comedy = ['Banana Cream Pi', 'Flaming Lamborghini', 'Gin Basil Smash '];
+          var drama = ['57 Checy with a White License Plate', '747 Drink', '155 Belmont'];
+          var horror = ['Michelada', 'Apperol Spritz', 'Amaretto Fizz'];
+          var thriller = ['Gin Basil Smash', 'Broadside', 'Abbey Martini'];
+          var scifi = ['Espresso Martini', 'Hot Toddy', 'Martinez 2'];
+          var crime = ['Miama Vice', 'Dark Caipirinha', "Hunter's Moon"];
+          var animation = ['Mango Mojito', 'Lemon Elderflower Spritzer', 'Cream Soda'];
+          var mystery = ['Adios Amigos Cocktail', 'Corpse Reviver', 'Death in the Afternoon'];
+          var biography = ['Gin Rickey', 'Addison', 'Mary Pickford'];
+          var documentary = ['Irish Curlding Cow', 'Mountain Bramble', "Duchamp's Punch"];
+          var family = ['Absolutely Fabulous', 'Cherry Electric Lemonade', 'Applejack'];
+          var filmnoir = ['Butterfly Effect', 'Afterglow', 'French Martini'];
+          var history = ['Brooklyn', 'Malibu Twister', " A Gillian's Island"];
+          var music = ['Funk and Soul', 'A1', 'Ace'];
+          var musical = ['Jitterbug', 'Honey Bee', 'Lazy Coconut Paloma'];
+          var short = ['Bahama Mama', 'Autumn Garibaldi', 'Figgy Thyme'];
+          var sport = ['A True Amaretto Sour', "Arizona Stingers' ", '9 1/2 Weeks'];
+          var western = ['Bounty Hunter', 'Corn n Oil', "Cocktail Horse's Neck"];
+          var war = ['Absolutly Screwed Up', 'Army Special', 'Bombay Cassis'];
+          var superhero = ["Captain kidd's Punch", 'Aquamarine', 'Apple Karate'];
 
           // if genre = x then drink
-          // create an array that includes a list of drinks for each genre. Some movies have multiple genres
+          if (genre = 'Animation') {
+            console.log('test')
+          }
+          if (genre = 'Action') {
+            console.log('test2')
+          }
+          if (genre = 'Adventure') {
+            console.log('test3')
+          }
+          if (genre = 'Romance') {
+            console.log('test4')
+          }
+          if (genre = 'Fantasy') {
+            console.log('test5')
+          }
+          if (genre = 'Comedy') {
+            console.log('test6')
+          }
+          if (genre = 'Drama') {
+            console.log('test7')
+          }
+          if (genre = 'Horror') {
+            console.log('test8')
+          }
+          if (genre = 'Thriller') {
+            console.log('test9')
+          }
+          if (genre = 'Crime') {
+            console.log('test10')
+          }
+          if (genre = 'Mystery') {
+            console.log('test11')
+          }
+          if (genre = 'SciFi') {
+            console.log('test12')
+          }
+
+          function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+          }
+          console.log(getRandomInt(2)); 
+          
+
+          //we already have a random number 
+          //we can choose index 0 1 2 
+          //so our random number we pass to the random generator 3 
+          //so we need to assing the random number to a variable
+          //the variable is going to be a number 
+          //check to see if one number equals another number from each number of the array 
+          //loop over the index of the array index and select the same number 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           // create a random number generator that selects a drink from the array for display
 
           // if ratings = x then drink // below a certain score
