@@ -24,13 +24,9 @@ function submit() {
       console.log(data);
       console.log(data.Genre);
       // Each genre
-      // console.log(data.Genre.split(","));
-
+      console.log(data.Genre.split(","));
       // One genre
-      var genre = data.Genre.split(",")[0];
-      console.log(genre);
-      var ratings = parseFloat(data.Ratings[1].Value);
-      console.log(ratings);
+      console.log(data.Genre.split(",")[0]);
 
       // DOM for movie display
       plotEl.textContent = "Plot: " + data.Plot;
@@ -41,9 +37,16 @@ function submit() {
       releaseEl.textContent = "Release Date: " + data.Released;
       runTimeEl.textContent = "Run Time: " + data.Runtime;
 
-      function displayPoster(data) {
-        
-      };
+
+      // if (data.Poster === "N/A") {
+      //   imageEl.src = "https://dummyimage.com/400x600";
+      // } else {
+      //   imageEl.src = data.Poster;
+      // }
+
+      // ternary if statement
+      imageEl.src = data.Poster === "N/A" ? "https://dummyimage.com/400x600" : data.Poster;
+
 
       // Set up variables for APIs needed for drinks first so the person working on drinks have access to data from movie fetch
 
