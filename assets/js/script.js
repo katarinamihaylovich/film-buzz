@@ -67,6 +67,47 @@ function submit() {
         .then(function (data) {
           console.log(data);
 
+        
+          // if genre = x then drink
+          if (genre = "biography") {
+            console.log("test13");
+          }
+          if (genre = "documentary") {
+            console.log("test14");
+          }
+          if (genre = "family") {
+            console.log("test15");
+          }
+          if (genre = "filmnoir") {
+            console.log("test16");
+          }
+          if (genre = "history") {
+            console.log("test17");
+          }
+          if (genre = "music") {
+            console.log("test18");
+          }
+          if (genre = "musical") {
+            console.log("test19");
+          }
+          if (genre = "short") {
+            console.log("test20");
+          }
+          if (genre = "sport") {
+            console.log("test21");
+          }
+          if (genre = "western") {
+            console.log("test22");
+          }
+          if (genre = "war") {
+            console.log("test23");
+          }
+          if (genre = "superhero") {
+            console.log("test24");
+          }
+          // create an array that includes a list of drinks for each genre. Some movies have multiple genres
+
+
 
           // created an array that includes a list of drinks for each genre 
           var action = ['Manhattan', 'Aviation', 'Gimlet'];
@@ -161,8 +202,8 @@ function submit() {
 
 
 
-          // create a random number generator that selects a drink from the array for display
 
+          // create a random number generator that selects a drink from the array for display
           // if ratings = x then drink // below a certain score
           // create an array that includes a list of drinks for each genre
           // create a random number generator that selects a drink from the array for display
