@@ -68,6 +68,33 @@ function submit() {
         .then(function (data) {
           console.log(data);
 
+          // create an array that includes a list of drinks for each genre. Some movies have multiple genres
+          // created an array that includes a list of drinks for each genre 
+          var action = ['Manhattan', 'Aviation', 'Gimlet'];
+          var adventure = ['Blue Hurricane', 'Midnight Mint', 'Greyhound'];
+          var romance = ['Cosmopolitan', 'Lemon Drop', 'Adam & Eve'];
+          var fantasy = ['Dry Martini', 'Gin and Tonic', 'Imperial Cocktail'];
+          var comedy = ['Banana Cream Pi', 'Flaming Lamborghini', 'Gin Basil Smash '];
+          var drama = ['57 Checy with a White License Plate', '747 Drink', '155 Belmont'];
+          var horror = ['Michelada', 'Apperol Spritz', 'Amaretto Fizz'];
+          var thriller = ['Gin Basil Smash', 'Broadside', 'Abbey Martini'];
+          var scifi = ['Espresso Martini', 'Hot Toddy', 'Martinez 2'];
+          var crime = ['Miama Vice', 'Dark Caipirinha', "Hunter's Moon"];
+          var animation = ['Mango Mojito', 'Lemon Elderflower Spritzer', 'Cream Soda'];
+          var mystery = ['Adios Amigos Cocktail', 'Corpse Reviver', 'Death in the Afternoon'];
+          var biography = ['Gin Rickey', 'Addison', 'Mary Pickford'];
+          var documentary = ['Irish Curlding Cow', 'Mountain Bramble', "Duchamp's Punch"];
+          var family = ['Absolutely Fabulous', 'Cherry Electric Lemonade', 'Applejack'];
+          var filmnoir = ['Butterfly Effect', 'Afterglow', 'French Martini'];
+          var history = ['Brooklyn', 'Malibu Twister', " A Gillian's Island"];
+          var music = ['Funk and Soul', 'A1', 'Ace'];
+          var musical = ['Jitterbug', 'Honey Bee', 'Lazy Coconut Paloma'];
+          var short = ['Bahama Mama', 'Autumn Garibaldi', 'Figgy Thyme'];
+          var sport = ['A True Amaretto Sour', "Arizona Stingers' ", '9 1/2 Weeks'];
+          var western = ['Bounty Hunter', 'Corn n Oil', "Cocktail Horse's Neck"];
+          var war = ['Absolutly Screwed Up', 'Army Special', 'Bombay Cassis'];
+          var superhero = ["Captain kidd's Punch", 'Aquamarine', 'Apple Karate'];
+
 
           function renderDrink(drinkName) {
             drinkContainerEl.innerHTML = " ";
@@ -87,42 +114,7 @@ function submit() {
 
         
           // if genre = x then drink
-          if (genre = "biography") {
-            console.log("test13");
-          }
-          if (genre = "documentary") {
-            console.log("test14");
-          }
-          if (genre = "family") {
-            console.log("test15");
-          }
-          if (genre = "filmnoir") {
-            console.log("test16");
-          }
-          if (genre = "history") {
-            console.log("test17");
-          }
-          if (genre = "music") {
-            console.log("test18");
-          }
-          if (genre = "musical") {
-            console.log("test19");
-          }
-          if (genre = "short") {
-            console.log("test20");
-          }
-          if (genre = "sport") {
-            console.log("test21");
-          }
-          if (genre = "western") {
-            console.log("test22");
-          }
-          if (genre = "war") {
-            console.log("test23");
-          }
-          if (genre = "superhero") {
-            console.log("test24");
-          }
+
           // create an array that includes a list of drinks for each genre. Some movies have multiple genres
 
 
@@ -141,67 +133,6 @@ function submit() {
           //   }
           // }
 
-          // created an array that includes a list of drinks for each genre
-          var action = ["Manhattan", "Aviation", "Gimlet"];
-          var adventure = ["Blue Hurricane", "Midnight Mint", "Greyhound"];
-          var romance = ["Cosmopolitan", "Lemon Drop", "Adam & Eve"];
-          var fantasy = ["Dry Martini", "Gin and Tonic", "Imperial Cocktail"];
-          var comedy = [
-            "Banana Cream Pi",
-            "Flaming Lamborghini",
-            "Gin Basil Smash ",
-          ];
-          var drama = [
-            "57 Checy with a White License Plate",
-            "747 Drink",
-            "155 Belmont",
-          ];
-          var horror = ["Michelada", "Apperol Spritz", "Amaretto Fizz"];
-          var thriller = ["Gin Basil Smash", "Broadside", "Abbey Martini"];
-          var scifi = ["Espresso Martini", "Hot Toddy", "Martinez 2"];
-          var crime = ["Miama Vice", "Dark Caipirinha", "Hunter's Moon"];
-          var animation = [
-            "Mango Mojito",
-            "Lemon Elderflower Spritzer",
-            "Cream Soda",
-          ];
-          var mystery = [
-            "Adios Amigos Cocktail",
-            "Corpse Reviver",
-            "Death in the Afternoon",
-          ];
-          var biography = ["Gin Rickey", "Addison", "Mary Pickford"];
-          var documentary = [
-            "Irish Curlding Cow",
-            "Mountain Bramble",
-            "Duchamp's Punch",
-          ];
-          var family = [
-            "Absolutely Fabulous",
-            "Cherry Electric Lemonade",
-            "Applejack",
-          ];
-          var filmnoir = ["Butterfly Effect", "Afterglow", "French Martini"];
-          var history = ["Brooklyn", "Malibu Twister", " A Gillian's Island"];
-          var music = ["Funk and Soul", "A1", "Ace"];
-          var musical = ["Jitterbug", "Honey Bee", "Lazy Coconut Paloma"];
-          var short = ["Bahama Mama", "Autumn Garibaldi", "Figgy Thyme"];
-          var sport = [
-            "A True Amaretto Sour",
-            "Arizona Stingers' ",
-            "9 1/2 Weeks",
-          ];
-          var western = [
-            "Bounty Hunter",
-            "Corn n Oil",
-            "Cocktail Horse's Neck",
-          ];
-          var war = ["Absolutly Screwed Up", "Army Special", "Bombay Cassis"];
-          var superhero = [
-            "Captain kidd's Punch",
-            "Aquamarine",
-            "Apple Karate",
-          ];
 
           // if genre = x then drink
           var randomIndex = Math.floor(Math.random() * 3);
@@ -258,6 +189,42 @@ function submit() {
           }
           if (genre === "SciFi") {
             console.log("test12");
+          }
+          if (genre = 'biography') {
+            console.log('test13');
+          }
+          if (genre = 'documentary') {
+            console.log('test14');
+          }
+          if (genre = 'family') {
+            console.log('test15');
+          }
+          if (genre = 'filmnoir') {
+            console.log('test16');
+          }
+          if (genre = 'history') {
+            console.log('test17');
+          }
+          if (genre = 'music') {
+            console.log('test18');
+          }
+          if (genre = 'musical') {
+            console.log('test19');
+          }
+          if (genre = 'short') {
+            console.log('test20');
+          }
+          if (genre = 'sport') {
+            console.log('test21');
+          }
+          if (genre = 'western') {
+            console.log('test22');
+          }
+          if (genre = 'war') {
+            console.log('test23');
+          }
+          if (genre = 'superhero') {
+            console.log('test24');
           }
 
           function getRandomInt(max) {
