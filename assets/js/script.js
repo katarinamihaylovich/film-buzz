@@ -8,12 +8,14 @@ var actorsEl = document.getElementById("actors");
 var directorEl = document.getElementById("director");
 var releaseEl = document.getElementById("release");
 var runTimeEl = document.getElementById("run-time");
+var drinkContainerEl = document.querySelector("#drink-container");
 var searchHistoryContainerEl = document.querySelector("#search-history");
 var searchHistoryList = JSON.parse(localStorage.getItem("searchHistory")) || [];
 
 function submit() {
   var search = searchInput.value.toString();
   console.log(search);
+  searchHistoryList.push(search);
   localStorage.setItem("searchHistory", JSON.stringify(searchHistoryList));
   renderSearchHistory();
 
@@ -33,10 +35,9 @@ function submit() {
       var genre = data.Genre.split(",")[0];
       console.log(genre);
       //var ratings = parseFloat(data.Ratings[1].Value);
-     // console.log(ratings);
+      // console.log(ratings);
 
       console.log(data.Genre.split(",")[0]);
-
 
       // DOM for movie display
       plotEl.textContent = "Plot: " + data.Plot;
@@ -54,8 +55,8 @@ function submit() {
       // }
 
       // ternary if statement
-      imageEl.src = data.Poster === "N/A" ? "https://dummyimage.com/400x600" : data.Poster;
-
+      imageEl.src =
+        data.Poster === "N/A" ? "https://dummyimage.com/400x600" : data.Poster;
 
       // Set up variables for APIs needed for drinks first so the person working on drinks have access to data from movie fetch
 
@@ -67,7 +68,6 @@ function submit() {
         .then(function (data) {
           console.log(data);
 
-      
           // create an array that includes a list of drinks for each genre. Some movies have multiple genres
           // created an array that includes a list of drinks for each genre 
           var action = ['Manhattan', 'Aviation', 'Gimlet'];
@@ -95,42 +95,100 @@ function submit() {
           var war = ['Absolutly Screwed Up', 'Army Special', 'Bombay Cassis'];
           var superhero = ["Captain kidd's Punch", 'Aquamarine', 'Apple Karate'];
 
+
+          function renderDrink(drinkName) {
+            drinkContainerEl.innerHTML = " ";
+            var animationEl = document.createElement("p");
+            animationEl.textContent = drinkName;
+            drinkContainerEl.appendChild(animationEl);
+
+            for (var i = 0; i < data.drinks.length; i++) {
+              if (data.drinks[i].strDrink === drinkName) {
+                var imageEl = document.createElement("img");
+                imageEl.src = data.drinks[i].strDrinkThumb;
+                imageEl.alt = drinkName;
+                drinkContainerEl.appendChild(imageEl);
+              }
+            }
+          }
+
+        
           // if genre = x then drink
-          if (genre = 'Animation') {
-            console.log('test')
+
+          // create an array that includes a list of drinks for each genre. Some movies have multiple genres
+
+
+
+          var drinkList = data.drinks;
+          console.log(drinkList.length);
+          console.log(drinkList[0].strDrinkThumb);
+          console.log(drinkList[0].strDrink);
+
+          // Search drinks array for name
+          // if name matches textcontent
+
+          // for (var i = 0; i < drinkList.length; i++) {
+          //   if (drinkList[i].strDrink === animationEl.textContent) {
+          //     console.log(drinkList[i]);
+          //   }
+          // }
+
+
+          // if genre = x then drink
+          var randomIndex = Math.floor(Math.random() * 3);
+          console.log(randomIndex);
+
+          // switch(genre){
+          //   case 'Animation':
+          //     var drink = animation[randomIndex];
+          //     renderDrink(drink);
+          //     break;
+          //   case 'Action':
+          //     var drink = action[randomIndex];
+          //     renderDrink(drink);
+          //     break;
+          // }
+
+          if (genre === "Animation") {
+            // Drink name
+            var drink = animation[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
           }
-          if (genre = 'Action') {
-            console.log('test2')
+          if (genre === "Action") {
+            var drink = action[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
           }
-          if (genre = 'Adventure') {
-            console.log('test3')
+          if (genre === "Adventure") {
+            console.log("test3");
           }
-          if (genre = 'Romance') {
-            console.log('test4')
+          if (genre === "Romance") {
+            console.log("test4");
           }
-          if (genre = 'Fantasy') {
-            console.log('test5')
+          if (genre === "Fantasy") {
+            console.log("test5");
           }
-          if (genre = 'Comedy') {
-            console.log('test6')
+          if (genre === "Comedy") {
+            console.log("test6");
           }
-          if (genre = 'Drama') {
-            console.log('test7')
+          if (genre === "Drama") {
+            console.log("test7");
           }
-          if (genre = 'Horror') {
-            console.log('test8')
+          if (genre === "Horror") {
+            console.log("test8");
           }
-          if (genre = 'Thriller') {
-            console.log('test9')
+          if (genre === "Thriller") {
+            console.log("test9");
           }
-          if (genre = 'Crime') {
-            console.log('test10')
+          if (genre === "Crime") {
+            console.log("test10");
           }
-          if (genre = 'Mystery') {
-            console.log('test11')
+          if (genre === "Mystery") {
+            console.log("test11");
           }
-          if (genre = 'SciFi') {
-            console.log('test12')
+          if (genre === "SciFi") {
+            console.log("test12");
           }
           if (genre = 'biography') {
             console.log('test13');
@@ -172,31 +230,15 @@ function submit() {
           function getRandomInt(max) {
             return Math.floor(Math.random() * max);
           }
-          console.log(getRandomInt(2)); 
-          
+          console.log(getRandomInt(2));
 
-          //we already have a random number 
-          //we can choose index 0 1 2 
-          //so our random number we pass to the random generator 3 
+          //we already have a random number
+          //we can choose index 0 1 2
+          //so our random number we pass to the random generator 3
           //so we need to assing the random number to a variable
-          //the variable is going to be a number 
-          //check to see if one number equals another number from each number of the array 
-          //loop over the index of the array index and select the same number 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          //the variable is going to be a number
+          //check to see if one number equals another number from each number of the array
+          //loop over the index of the array index and select the same number
 
 
           // create a random number generator that selects a drink from the array for display
@@ -212,8 +254,8 @@ searchBtn.addEventListener("click", submit);
 
 // Search history button
 searchHistoryContainerEl.addEventListener("click", function (event) {
-  if (event.target.matches("#search-history")) {
-    console.log("test");
+  if (event.target.matches("button")) {
+    alert("test");
   }
 });
 
