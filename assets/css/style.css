@@ -10,6 +10,7 @@ img {
 
 #search-btn {
   background-color: palevioletred;
+  border-radius: 25px;
 }
 
 .display-labels {
