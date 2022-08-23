@@ -149,83 +149,137 @@ function submit() {
           //     break;
           // }
 
-          if (genre === "Animation") {
-            // Drink name
+          //Drink Name
+        if (genre === "Animation") {
             var drink = animation[randomIndex];
             console.log(drink);
             renderDrink(drink);
-          }
-          if (genre === "Action") {
+        }
+        if (genre === "Action") {
             var drink = action[randomIndex];
             console.log(drink);
             renderDrink(drink);
-          }
-          if (genre === "Adventure") {
-            console.log("test3");
-          }
-          if (genre === "Romance") {
-            console.log("test4");
-          }
-          if (genre === "Fantasy") {
-            console.log("test5");
-          }
-          if (genre === "Comedy") {
-            console.log("test6");
-          }
-          if (genre === "Drama") {
-            console.log("test7");
-          }
-          if (genre === "Horror") {
-            console.log("test8");
-          }
-          if (genre === "Thriller") {
-            console.log("test9");
-          }
-          if (genre === "Crime") {
-            console.log("test10");
-          }
-          if (genre === "Mystery") {
-            console.log("test11");
-          }
-          if (genre === "SciFi") {
-            console.log("test12");
-          }
-          if (genre = 'biography') {
-            console.log('test13');
-          }
-          if (genre = 'documentary') {
-            console.log('test14');
-          }
-          if (genre = 'family') {
-            console.log('test15');
-          }
-          if (genre = 'filmnoir') {
-            console.log('test16');
-          }
-          if (genre = 'history') {
-            console.log('test17');
-          }
-          if (genre = 'music') {
-            console.log('test18');
-          }
-          if (genre = 'musical') {
-            console.log('test19');
-          }
-          if (genre = 'short') {
-            console.log('test20');
-          }
-          if (genre = 'sport') {
-            console.log('test21');
-          }
-          if (genre = 'western') {
-            console.log('test22');
-          }
-          if (genre = 'war') {
-            console.log('test23');
-          }
-          if (genre = 'superhero') {
-            console.log('test24');
-          }
+        
+        }
+        if (genre === "Adventure") {
+            var drink = adventure[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        if (genre === "Romance") {
+            var drink = romance[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        if (genre === "Fantasy") {
+            var drink = fantasy[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        if (genre === "Comedy") {
+            var drink = comedy[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        if (genre === "Drama") {
+            var drink = drama[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        if (genre === "Horror") {
+            var drink = horror[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        if (genre === "Thriller") {
+            var drink = thriller[randomIndex]
+            console.log(drink);
+            renderDrink(drink);
+        }
+        if (genre === "Crime") {
+            var drink = crime[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        if (genre === "Mystery") {
+            var drink = mystery[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        if (genre === "Biography") {
+            var drink = biograpghy[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        if (genre === "Documentary") {
+            var drink = documentary[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        if (genre === "Family") {
+            var drink = family[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        if (genre === "SciFi") {
+            var drink = scifi[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        
+        if (genre === "Filmnoir") {
+            var drink = filmnoir[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        
+        if (genre === "History") {
+            var drink = history[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        
+        if (genre === "Music") {
+            var drink = history[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        
+        if (genre === "Musical") {
+            var drink = musical[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        
+        if (genre === "Short") {
+            var drink = short[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        
+        if (genre === "Sport") {
+            var drink = sport[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        
+        if (genre === "Western") {
+            var drink = western[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        
+        if (genre === "War") {
+            var drink = war[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
+        
+        if (genre === "Superhero") {
+            var drink = superhero[randomIndex];
+            console.log(drink);
+            renderDrink(drink);
+        }
 
           function getRandomInt(max) {
             return Math.floor(Math.random() * max);
