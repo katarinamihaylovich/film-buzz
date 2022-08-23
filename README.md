@@ -10,3 +10,19 @@ Third party APIs:
 
 https://www.omdbapi.com/
 https://www.thecocktaildb.com/api.php
+
+## Technology Used:
+
+1. HTML
+2. CSS
+3. JavaScript
+
+## Active Link: https://katarinamihaylovich.github.io/film-buzz/
+
+## Screenshots 
+(in various states of use)
+
+![](./images/godfather_ss.png)
+![](./images/history_ss.png)
+![](./images/nosferatu_ss.png)
+
